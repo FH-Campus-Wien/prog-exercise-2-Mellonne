@@ -44,6 +44,26 @@ public class App {
     public void stairs(){
         // input your solution here
         //System.out.printf(...) > für 2.Nachkomma stellen verwernden
+        Scanner scanner;
+        scanner = new Scanner(System.in);
+        int n;
+        int counter=0;
+        System.out.print("n: ");
+        n = scanner.nextInt();
+        if(n>0) {
+            for (int i = 1; i <= n; i++) {
+                for (int x = 1; x <= i; x++) {
+                    counter = counter + 1;
+                    System.out.print(counter + " ");
+                }
+                System.out.println("");
+            }
+        }
+        else {
+            System.out.println("Invalid number!");
+        }
+
+
     }
 
     //todo Task 3
