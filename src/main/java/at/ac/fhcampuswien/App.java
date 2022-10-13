@@ -30,9 +30,10 @@ public class App {
 
                 counter++;
 
-            }while(num != 0);
+            }while(num > 0);
             String largestnumformatted = String.format("The largest number is %.2f",largestnum);
-            System.out.print(largestnumformatted);
+
+            System.out.println( largestnumformatted.replaceAll(",","."));
 
 
         }
