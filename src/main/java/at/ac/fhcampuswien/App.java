@@ -95,11 +95,52 @@ public class App {
     //todo Task 4
     public void printRhombus(){
         // input your solution here
+
     }
 
     //todo Task 5
     public void marks(){
         // input your solution here
+        Scanner scanner;
+        scanner = new Scanner(System.in);
+        int mark;
+        int markcount = 0;
+        int marksum = 0;
+        int negmark=0;
+        double averagemark;
+
+
+        do {
+            markcount++;
+            System.out.print("Mark " + markcount + ": ");
+            mark = scanner.nextInt();
+
+            if(mark>5){  //Ask for the same Mark Num again if the mark is invalid
+                System.out.println("Invalid mark!");
+                System.out.print("Mark " + markcount + ": ");
+                mark = scanner.nextInt();
+            }
+            if(mark==5){  //If the mark is a 5, count it
+                negmark++;
+            }
+            //System.out.println("DEBUG: "+mark);
+            marksum = (marksum+mark);
+
+        }while(mark>0);
+        markcount = markcount-1;
+        averagemark = (double)marksum/(double)markcount;
+        String averagemarkformatted = String.format("%.2f",averagemark);
+        if(Double.isNaN(averagemark) && markcount == 0 ){  //Checks if the output is NaN (Not a Number) and replaces it with 0.00
+            System.out.println("Average: 0.00");
+            System.out.println("Negative marks: "+negmark);
+        }else{
+        System.out.println("Average: "+averagemarkformatted);
+        System.out.println("Negative marks: "+negmark);}
+
+
+
+
+
     }
 
     //todo Task 6
