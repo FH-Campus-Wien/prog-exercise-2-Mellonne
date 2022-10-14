@@ -69,6 +69,27 @@ public class App {
     //todo Task 3
     public void printPyramid(){
         // input your solution here
+        int rows = 6;
+        int staramount = 1;
+        int spaceamount = 5;
+        //Loop for the Rows
+        for (int i=1; i<=rows; i++){
+            //Loop for the spaces
+            for(int y =1; y<=spaceamount;y++){
+                System.out.print(" ");
+            }
+            //Loop for the Stars
+            for(int x = 1; x<=staramount;x++){
+                System.out.print("*");
+
+            }
+            System.out.println("");
+            staramount = staramount+2;
+            spaceamount = spaceamount -1;
+
+
+        }
+
     }
 
     //todo Task 4
